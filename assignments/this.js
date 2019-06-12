@@ -27,7 +27,7 @@ console.log(fox("What does the fox say?"))
 const somethingInteresting = {
     greeting: '大家好',
     sayGreeting: function(name){
-        console.log(`${this.greeting} 我叫 ${this.name}`);
+        console.log(`${this.greeting} 我叫 ${name}`);
         console.log(this); 
     }
 };
@@ -38,12 +38,39 @@ somethingInteresting.sayGreeting('Kenya');
 
 // code example for New Binding
 
-function 
+function Language(sayHello) {
+    this.hellospanish = "Hola ";
+    this.sayHello = sayHello;
+    this.speak = function() {
+        console.log(this.hellospanish + this.sayHello);
+        console.log(this)
+    }
+}
 
-// soundOne.dog();
-// soundTwo.dog();
+const mari = new Language('Kenya')
+const kenya = new Language('Mari')
 
+mari.speak();
+kenya.speak();
 
 // Principle 4
 
 // code example for Explicit Binding
+
+function Languagetwo(sayHi) {
+    this.helloswedish = "Hejsan ";
+    this.sayHi = sayHi;
+    this.talk = function() {
+        console.log(this.helloswedish + this.sayHi);
+        console.log(this)
+    }
+}
+
+const martin = new Languagetwo('John')
+const john = new Languagetwo('Martin')
+
+martin.talk.call(john); john.talk.apply(martin);
+
+// martin.talk();
+// john.talk();
+
