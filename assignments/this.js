@@ -71,6 +71,3 @@ const john = new Languagetwo('Martin')
 
 martin.talk.call(john); john.talk.apply(martin);
 
-// martin.talk();
-// john.talk();
-

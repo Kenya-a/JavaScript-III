@@ -61,6 +61,19 @@ CharacterStats.prototype.takeDamage =function() {
  Humanoid.prototype.greet = function(){
    return `${this.name} offers a greeting in ${this.language}`
  }
+
+ function Villain(alien){
+   Humanoid.call(this, alien)
+   this.army = alien.army
+   this.power = alien.power
+   this.dialect = alien.dialect
+   this.definitelyAlien = alien.definitelyAlien
+ }
+    Villain.prototype = Object.create(Humanoid.prototype)
+
+    Villain.prototype.annihilate = function(){
+      return `${this.power} is activated`
+    }
 /*
   * Inheritance chain: GameObject -> CharacterStats -> Humanoid
   * Instances of Humanoid should have all of the same properties as CharacterStats and GameObject.
@@ -120,6 +133,44 @@ CharacterStats.prototype.takeDamage =function() {
     ],
     language: 'Elvish',
   });
+
+
+
+  //Character 4 👽
+const goblin = new Humanoid({
+  createdAt: new Date(),
+  dimensions: {
+    length: 3,
+    width: 2,
+    height: 2,
+  },
+  healthPoints: 15,
+  name: 'STibm',
+  team: 'AlienG',
+  weapons: [
+    'Power of Villian',
+  ],
+  language: 'hraki',
+});
+
+
+
+//Character 5 👾
+const goblin = new Humanoid({
+  createdAt: new Date(),
+  dimensions: {
+    length: 3,
+    width: 2,
+    height: 2,
+  },
+  healthPoints: 15,
+  name: 'STibm',
+  team: 'AlienG',
+  weapons: [
+    'Power of Villian',
+  ],
+  language: 'hraki',
+});
 
   console.log(mage.createdAt); // Today's date
   console.log(archer.dimensions); // { length: 1, width: 2, height: 4 }
