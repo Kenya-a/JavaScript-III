@@ -25,14 +25,14 @@ console.log(fox("What does the fox say?"))
 // code example for Implicit Binding
 
 const somethingInteresting = {
-    greeting: '大家好',
+    greeting: '你好',
     sayGreeting: function(name){
-        console.log(`${this.greeting} 我叫 ${name}`);
+        console.log(`${this.greeting} 我是 ${name}`);
         console.log(this); 
     }
 };
 
-somethingInteresting.sayGreeting('Kenya');
+somethingInteresting.sayGreeting('Cain');
 
 // Principle 3
 
