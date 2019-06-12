@@ -13,13 +13,36 @@
 
 // code example for Window Binding
 
+function fox(sound){
+    console.log(this);
+    return sound;
+}
+console.log(fox("What does the fox say?"))
+
+
 // Principle 2
 
 // code example for Implicit Binding
 
+const somethingInteresting = {
+    greeting: '大家好',
+    sayGreeting: function(name){
+        console.log(`${this.greeting} 我叫 ${this.name}`);
+        console.log(this); 
+    }
+};
+
+somethingInteresting.sayGreeting('Kenya');
+
 // Principle 3
 
 // code example for New Binding
+
+function 
+
+// soundOne.dog();
+// soundTwo.dog();
+
 
 // Principle 4
 
