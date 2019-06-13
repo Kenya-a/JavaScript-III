@@ -156,7 +156,7 @@ const goblin = new Humanoid({
 
 
 //Character 5 👾
-const goblin = new Humanoid({
+const bill = new Humanoid({
   createdAt: new Date(),
   dimensions: {
     length: 3,
